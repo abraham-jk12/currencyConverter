@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dollar to Rupee Converter</title>
+</head>
+<body>
+  <h2>1 Dollar = 73.66 Indian Rupee</h2>
+
+  <input type="number" id="dollarInput" placeholder="Enter dollars" oninput="convertToRupees()" />
+  <label>Doller</label>
+  <br><br>
+
+  <input type="text" id="rupeeOutput" readonly />
+  <label>Rupee</label>
+
+  <script>
+    const rate = 73.66;
+
+    function convertToRupees() {
+      const dollar = document.getElementById("dollarInput").value;
+      const rupee = dollar * rate;
+      document.getElementById("rupeeOutput").value = rupee.toFixed(2);
+    }
+  </script>
+</body>
+</html>
